@@ -56,7 +56,8 @@
             'mt-0 border-t': i % 2 === 1,
             'mt-4': !product.title
           }"
-          :key="model.name"
+          :id="model.id"
+          :key="model.id"
           v-for="(model, i) in product.models"
         >
           <div class="relative">
@@ -112,7 +113,19 @@
 </template>
 
 <script setup>
+import { onMounted } from 'vue'
+
 // import { classnames } from 'tailwindcss-classnames'
+
+onMounted(() => {
+  const hash = window.location.hash
+  if (hash) {
+    const el = document.getElementById(hash.slice(1))
+    if (el) {
+      el.scrollIntoView()
+    }
+  }
+})
 
 const products = [
   {
@@ -121,12 +134,14 @@ const products = [
       'We build solar water pumps for irrigation and provide farmers with on-demand solar irrigation services to help them farm all year and reduce high operational cost from fossil fuel water pumps. We have two solar water pumps.',
     models: [
       {
+        id: 'np1-solar-irrigation-pump',
         name: 'NP1 Solar Irrigation pump',
         description:
           'The NP1 Solar Irrigation pump which is optimized for 1-2 acres of farm land. It comes with 300 watts foldable solar panel, and it is designed with a battery to help farmers irrigate in moments of low sunlight and can be used to charge phone and lighten homes with led bulbs that comes with it. It can pump up to 10,000 liters per hour. We offer this on a pay-per- use, outright purchase or lease-to-own payment plan.',
         image: '/assets/img/slide-1.jpg'
       },
       {
+        id: 'np2-solar-irrigation-pump',
         name: 'NP2 Solar Irrigation pump',
         description:
           'The NP 2 Solar Irrigation pump is the bigger sized solar water pump which is optimized for over 10 acres of farm land. It is designed with two wheeled cart for easy mobility and a retractable 900 watts solar panel enough to pump up to 30,000 liters of water per hour. We offer this on a pay-per-use, outright purchase or lease-to-own payment plan.',
@@ -139,6 +154,7 @@ const products = [
     description: null,
     models: [
       {
+        id: 'solar-thresher',
         name: 'Solar Thresher',
         description: `We build solar thresher and provide smallholder farmers with on-demand solar threshing service on per-per-use model with our solar grain thresher which has the ability to thresh 300kg of grains per hour particularly maize and rice... Our thresher produces 2.5KVA of power and the excess are stored in batteries that can lighten 7 homes in off-grid rural communities.`,
         image: '/assets/img/slide-3.jpg'
@@ -151,6 +167,7 @@ const products = [
     description: null,
     models: [
       {
+        id: 'solar-dryer',
         name: 'Solar Dryer',
         description: `We build solar dryer and provide smallholder farmers with on-demand solar drying service on pay-per-use model, it can dry vegetables and grains faster and hygienically to reduce post-harvest losses suffered by farmers.`,
         image: '/assets/img/slide-4.jpg'

@@ -2,7 +2,7 @@
   <div class="pb-8 bg-primary lg:pb-14 lg:overflow-hidden">
     <Splide :has-track="false" :options="options">
       <SplideTrack>
-        <SplideSlide :key="slide" v-for="slide in slides">
+        <SplideSlide :key="slide.id" v-for="slide in slides">
           <div class="lg:flex" v-if="slide.style == 2">
             <div
               class="w-full h-64 overflow-hidden lg:w-1/2 lg:h-auto rounded-tl-3xl rounded-br-3xl"
@@ -28,8 +28,8 @@
                       :key="title"
                       v-for="(title, i) in titler(slide.title)"
                     >
-                      {{ title }}</span
-                    >
+                      {{ title }}&nbsp;
+                    </span>
                   </h1>
                   <p
                     class="mt-3 text-base text-white sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
@@ -39,10 +39,10 @@
                   <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                     <div class="rounded-md shadow">
                       <a
-                        href="#"
+                        :href="$router.resolve({ name: 'services' }).href + '#' + slide.id"
                         class="flex items-center justify-center w-full px-8 py-3 text-base font-medium text-white bg-red-600 border border-transparent rounded-md hover:bg-red-700 md:py-4 md:text-lg md:px-10"
                       >
-                        Get started
+                        Read More
                       </a>
                     </div>
                     <div class="mt-3 sm:mt-0 sm:ml-3">
@@ -88,8 +88,8 @@
                       :key="title"
                       v-for="(title, i) in titler(slide.title)"
                     >
-                      {{ title }}</span
-                    >
+                      {{ title }}&nbsp;
+                    </span>
                   </h1>
                   <p class="text-base text-gray-800 sm:text-xl lg:text-lg xl:text-xl">
                     {{ slide.info }}
@@ -125,28 +125,34 @@
 import '@splidejs/vue-splide/css/sea-green'
 import { ChevronRightIcon } from '@heroicons/vue/solid'
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/vue-splide'
+import { RouterLink } from 'vue-router'
 import { ref } from 'vue'
+import router from '../router'
 
 const slides = ref([
   {
+    id: 'np1-solar-irrigation-pump',
     image: '/assets/img/slide-1.jpg',
     style: 1,
     title: 'Nimsy Solar Pump (NP1)',
     info: 'Optimized for 1-2 acres of farm land, pumps up to 10,000 liters per hour, comes with a 300 watts foldable solar panel, battery back up and can be used to charge phones and lighten homes with led bulbs. '
   },
   {
+    id: 'np2-solar-irrigation-pump',
     image: '/assets/img/slide-2.jpg',
     style: 2,
     title: 'Nimsy Solar Pump (NP)',
     info: 'Optimized for over 10 acres of farm land, pump up to 30,000 liters of water per hour, 900 watts retractable solar panel mounted on two-wheeled cart for easy mobility.'
   },
   {
+    id: 'solar-thresher',
     image: '/assets/img/slide-3.jpg',
     style: 1,
     title: 'Nimsy Solar Thresher',
     info: 'Threshes 300kg of grains per hour particularly maize and rice, 1,200 watts retractable solar panel mounted on a four-wheeled cart for mobility, produces 2.5KVA of power and the excess are stored in batteries that can lighten 7 homes in off-grid rural communities. Waste products of maize cob and rice stalk are recycled into clean charcoal briquettes for cooking.'
   },
   {
+    id: 'solar-dryer',
     image: '/assets/img/slide-4.jpg',
     style: 2,
     title: 'Nimsy Solar Dryer',

@@ -169,7 +169,7 @@ const titler = (title) => {
 
 const options = {
   rewind: true,
-  autoplay: false,
+  autoplay: true,
   arrows: false,
   type: 'loop'
 }

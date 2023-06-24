@@ -142,7 +142,7 @@
               <dt><span class="sr-only">Email</span></dt>
               <dd class="flex text-base text-indigo-50">
                 <MailIcon class="flex-shrink-0 w-6 h-6 text-indigo-200" aria-hidden="true" />
-                <span class="ml-3">info@nimsyagro.com</span>
+                <span class="ml-3">info@nimsyagrosolar.com</span>
               </dd>
               <dt><span class="sr-only">Address</span></dt>
               <dd class="flex text-base text-indigo-50">

@@ -1,5 +1,5 @@
 <template>
-  <div class="pb-8 bg-primary lg:pb-14 lg:overflow-hidden">
+  <div class="pb-8 bg-primary-3 lg:pb-14 lg:overflow-hidden">
     <Splide :has-track="false" :options="options">
       <SplideTrack>
         <SplideSlide :key="slide.id" v-for="slide in slides">
@@ -91,7 +91,7 @@
                       {{ title }}&nbsp;
                     </span>
                   </h1>
-                  <p class="text-base text-gray-800 sm:text-xl lg:text-lg xl:text-xl">
+                  <p class="text-base text-white sm:text-xl lg:text-lg xl:text-xl">
                     {{ slide.info }}
                   </p>
                 </div>
@@ -125,9 +125,7 @@
 import '@splidejs/vue-splide/css/sea-green'
 import { ChevronRightIcon } from '@heroicons/vue/solid'
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/vue-splide'
-import { RouterLink } from 'vue-router'
 import { ref } from 'vue'
-import router from '../router'
 
 const slides = ref([
   {
@@ -139,21 +137,21 @@ const slides = ref([
   },
   {
     id: 'np2-solar-irrigation-pump',
-    image: '/assets/img/slide-2.jpg',
+    image: '/assets/img/slide-3.jpg',
     style: 2,
-    title: 'Nimsy Solar Pump (NP)',
+    title: 'Nimsy Solar Pump (NP 2)',
     info: 'Optimized for over 10 acres of farm land, pump up to 30,000 liters of water per hour, 900 watts retractable solar panel mounted on two-wheeled cart for easy mobility.'
   },
   {
     id: 'solar-thresher',
-    image: '/assets/img/slide-3.jpg',
+    image: '/assets/img/slide-4.jpg',
     style: 1,
     title: 'Nimsy Solar Thresher',
     info: 'Threshes 300kg of grains per hour particularly maize and rice, 1,200 watts retractable solar panel mounted on a four-wheeled cart for mobility, produces 2.5KVA of power and the excess are stored in batteries that can lighten 7 homes in off-grid rural communities. Waste products of maize cob and rice stalk are recycled into clean charcoal briquettes for cooking.'
   },
   {
     id: 'solar-dryer',
-    image: '/assets/img/slide-4.jpg',
+    image: '/assets/img/slide-2.jpg',
     style: 2,
     title: 'Nimsy Solar Dryer',
     info: 'Dries grains and vegetables faster and hygienically, equipped with 300 watts solar panel, air blower and drying compartment mounted on a four-wheeled cart for easy mobility.'

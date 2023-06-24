@@ -105,7 +105,7 @@ if (empty($err)) {
 // Get the url parameters as an array
 parse_str($url, $params);
 
-if (!empty($origin)) {
+if (!empty($origin) && stripos($origin, 'http') !== false) {
     if (!isset($params['success']) && empty($err)) {
         header("location: $origin?success=true");
     } elseif (!empty($err)) {
@@ -113,5 +113,3 @@ if (!empty($origin)) {
         ;
     }
 }
-
-// return var_dump($form, $params, $origin, http_build_query($err));

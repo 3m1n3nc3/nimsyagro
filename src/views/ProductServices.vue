@@ -64,7 +64,7 @@
             <h3 class="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">
               {{ model.name }}
             </h3>
-            <p class="mt-3 text-lg text-gray-500">
+            <p class="mt-3 text-lg text-justify text-gray-500">
               {{ model.description }}
             </p>
           </div>
@@ -145,7 +145,7 @@ const products = [
         name: 'NP2 Solar Irrigation pump',
         description:
           'The NP 2 Solar Irrigation pump is the bigger sized solar water pump which is optimized for over 10 acres of farm land. It is designed with two wheeled cart for easy mobility and a retractable 900 watts solar panel enough to pump up to 30,000 liters of water per hour. We offer this on a pay-per-use, outright purchase or lease-to-own payment plan.',
-        image: '/assets/img/slide-2.jpg'
+        image: '/assets/img/slide-3.jpg'
       }
     ]
   },
@@ -157,7 +157,7 @@ const products = [
         id: 'solar-thresher',
         name: 'Solar Thresher',
         description: `We build solar thresher and provide smallholder farmers with on-demand solar threshing service on per-per-use model with our solar grain thresher which has the ability to thresh 300kg of grains per hour particularly maize and rice... Our thresher produces 2.5KVA of power and the excess are stored in batteries that can lighten 7 homes in off-grid rural communities.`,
-        image: '/assets/img/slide-3.jpg'
+        image: '/assets/img/slide-4.jpg'
       }
     ]
   },
@@ -170,7 +170,7 @@ const products = [
         id: 'solar-dryer',
         name: 'Solar Dryer',
         description: `We build solar dryer and provide smallholder farmers with on-demand solar drying service on pay-per-use model, it can dry vegetables and grains faster and hygienically to reduce post-harvest losses suffered by farmers.`,
-        image: '/assets/img/slide-4.jpg'
+        image: '/assets/img/slide-2.jpg'
       }
     ]
   }

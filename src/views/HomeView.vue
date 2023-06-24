@@ -114,7 +114,7 @@
               </figure>
             </div>
           </div>
-          <div class="mt-8 lg:mt-0">
+          <div class="mt-8 text-justify lg:mt-0">
             <div class="mx-auto text-base max-w-prose lg:max-w-none">
               <p class="text-lg text-gray-500">
                 Smallholder farmers rely heavily on fossil fuel agricultural equipment for
@@ -220,7 +220,7 @@
             <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
               Our solution
             </h2>
-            <div class="mt-6 space-y-6 text-gray-500">
+            <div class="mt-6 space-y-6 text-justify text-gray-500">
               <p class="text-lg">
                 Nimsy agro solar concept builds solar powered agricultural equipment and provide
                 smallholder farmers with on-demand solar irrigation, threshing and drying services

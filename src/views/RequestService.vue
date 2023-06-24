@@ -47,7 +47,7 @@
       </svg>
       <div class="text-center">
         <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-          Request for Services
+          Request For Our Services
         </h2>
         <p class="mt-4 text-lg leading-6 text-gray-500">
           Request for services and we will get back to you as soon as possible.
@@ -159,7 +159,11 @@
 </template>
 
 <script setup>
-const services = [{ name: 'Solar' }, { name: 'Threshing' }, { name: 'Irrigation or drying' }]
+const services = [
+  { name: 'Solar Irrigation' },
+  { name: 'Solar Threshing' },
+  { name: 'Solar Drying' }
+]
 
 const states = [
   { name: 'Abia' },

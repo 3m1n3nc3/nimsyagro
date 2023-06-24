@@ -2,7 +2,7 @@
   <div class="bg-white">
     <div class="relative overflow-hidden">
       <Popover as="header" class="relative">
-        <div class="py-6 bg-primary">
+        <div class="py-6 bg-primary-3">
           <nav
             class="relative flex items-center justify-between px-4 mx-auto max-w-7xl sm:px-6"
             aria-label="Global"
@@ -99,8 +99,12 @@
           </div>
           <div class="py-8 mt-12 border-t border-gray-200">
             <p class="text-base text-gray-400 xl:text-center">
-              &copy; {{ new Date().getFullYear() }} Nims Agro Solar Concept. All rights reserved.
+              &copy; {{ new Date().getFullYear() }} Nimsy Agro Solar Concept. All rights reserved.
             </p>
+            <div class="text-gray-600 cursor-default">
+              Developed by
+              <a href="https://hoolicontech.com" target="_blank">Hoolicon Technologies</a>
+            </div>
           </div>
         </div>
       </footer>
@@ -118,7 +122,7 @@ const navigation = [
   { name: 'Home', route: { name: 'home' } },
   { name: 'Gallery', route: { name: 'gallery' } },
   { name: 'Product & Services', route: { name: 'services' } },
-  { name: 'Request for Services', route: { name: 'request' } },
+  { name: 'Service Requests', route: { name: 'request' } },
   { name: 'Contact-us', route: { name: 'contact' } }
 ]
 
@@ -142,6 +146,11 @@ const socials = [
     name: 'LinkedIn',
     href: 'https://www.linkedin.com/company/nimsy-agro-solar',
     icon: 'fab fa-linkedin-in'
+  },
+  {
+    name: 'Twitter',
+    href: 'https://twitter.com/nimsyagrosolar',
+    icon: 'fab fa-twitter'
   }
 ]
 </script>

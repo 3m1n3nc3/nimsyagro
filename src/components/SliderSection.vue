@@ -65,8 +65,8 @@
                 class="max-w-md px-4 mx-auto sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center"
               >
                 <div class="lg:py-24">
-                  <a
-                    href="#"
+                  <RouterLink
+                    :to="{ name: 'services' }"
                     class="inline-flex items-center p-1 pr-2 text-white bg-black rounded-full sm:text-base lg:text-sm xl:text-base hover:text-gray-200"
                   >
                     <span
@@ -75,7 +75,7 @@
                     >
                     <span class="ml-4 text-sm">Find out more</span>
                     <ChevronRightIcon class="w-5 h-5 ml-2 text-gray-500" aria-hidden="true" />
-                  </a>
+                  </RouterLink>
                   <h1
                     class="mt-4 text-4xl font-extrabold tracking-tight text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl"
                   >

@@ -123,7 +123,7 @@ const navigation = [
   { name: 'Gallery', route: { name: 'gallery' } },
   { name: 'Product & Services', route: { name: 'services' } },
   { name: 'Service Requests', route: { name: 'request' } },
-  { name: 'Contact-us', route: { name: 'contact' } }
+  { name: 'Contact Us', route: { name: 'contact' } }
 ]
 
 const socials = [

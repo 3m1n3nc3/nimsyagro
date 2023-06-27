@@ -32,7 +32,7 @@
 
 <script setup>
 import { ref, watch, defineProps, defineEmits } from 'vue'
-const emit = defineEmits(['update:modelValue'])
+const emit = defineEmits(['update:modelValue', 'opened', 'closed'])
 const props = defineProps({
   title: {
     type: String,
@@ -48,6 +48,11 @@ const props = defineProps({
 const isOpen = ref(props.modelValue)
 watch(isOpen, (value) => {
   emit('update:modelValue', value)
+  if (value) {
+    emit('opened')
+  } else {
+    emit('closed')
+  }
 })
 
 watch(

@@ -34,13 +34,21 @@ div .form-group {
 
 // Get the form data
 $form = $_POST ?? [];
+$sent = false;
 
 // Get the current url
 $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_QUERY) ?? '';
 
 // Get the full url where the form was submitted from
-$origin = substr($_SERVER['HTTP_REFERER'] ?? '', 0, -1);
-$origin .= $form['origin'] ?? '';
+$origin = $_SERVER['HTTP_REFERER'];
+
+// Remove existing query string from the url
+$origin = strtok($origin, '?');
+
+if (stripos($origin, 'http') === false) {
+    $origin = substr($origin ?? '', 0, -1);
+    $origin .= $form['origin'] ?? '';
+}
 
 $fullname = $form['fullname'] ?? '';
 $email = $form['email'] ?? '';
@@ -73,8 +81,8 @@ if (empty($err)) {
         $mail->Password = '8e5cbee2894a8e';
 
         //Recipients
-        $mail->setFrom('from@example.com', 'NimsyAgro Contact Form');
-        $mail->addAddress('joe@example.net');     //Add a recipient
+        $mail->setFrom('no-reply@nimsyagrosolar.com', 'NimsyAgro Contact Form');
+        $mail->addAddress('info@nimsyagrosolar.com', 'NimsyAgro');     //Add a recipient
 
         //Content
         $mail->isHTML(true);                                  //Set email format to HTML
@@ -96,6 +104,7 @@ if (empty($err)) {
         $mail->AltBody = $message;
 
         $mail->send();
+        $sent = true;
     } catch (Exception $e) {
         $err["message"] = "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
@@ -105,9 +114,13 @@ if (empty($err)) {
 // Get the url parameters as an array
 parse_str($url, $params);
 
+if ($sent) {
+    $params['message'] = 'Your message has been sent successfully, we will get back to you soon.';
+}
+
 if (!empty($origin) && stripos($origin, 'http') !== false) {
     if (!isset($params['success']) && empty($err)) {
-        header("location: $origin?success=true");
+        header("location: $origin?success=true&" . http_build_query($params));
     } elseif (!empty($err)) {
         header("location: $origin?success=false&" . http_build_query($err));
         ;

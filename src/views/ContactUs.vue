@@ -11,25 +11,10 @@
       </p>
     </div>
     <div class="px-4 pt-16 mx-auto max-w-7xl sm:pt-24 sm:px-6 lg:px-8">
-      <div class="relative bg-white shadow-xl">
-        <h2 class="sr-only">Contact us</h2>
+      <div class="relative overflow-hidden bg-white rounded-lg">
+        <h2 class="sr-only">Contact Information</h2>
 
         <div class="grid grid-cols-1 lg:grid-cols-3">
-          <div class="lg:col-span-3">
-            <div class="h-56 overflow-hidden lg:h-auto">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.151675546865!2d7.4164483751369055!3d10.488707064434653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104d354968884b09%3A0x10daecde84ce4edf!2sEesha%20plaza!5e0!3m2!1sen!2sng!4v1687521295940!5m2!1sen!2sng"
-                width="100%"
-                height="100%"
-                frameborder="0"
-                title="map"
-                marginheight="0"
-                marginwidth="0"
-                scrolling="no"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-          </div>
           <!-- Contact information -->
           <div class="relative px-6 py-10 overflow-hidden bg-primary sm:px-10 xl:p-12">
             <div class="absolute inset-0 pointer-events-none sm:hidden" aria-hidden="true">
@@ -154,7 +139,11 @@
             </dl>
             <ul role="list" class="flex mt-6 space-x-12">
               <li :key="social.name" v-for="social in socials">
-                <a class="text-indigo-200 hover:text-indigo-100" :href="social.href">
+                <a
+                  class="text-indigo-200 hover:text-indigo-100"
+                  :href="social.href"
+                  target="_blank"
+                >
                   <span class="sr-only">{{ social.name }}</span>
                   <i :class="social.icon" class="w-6 h-6"></i>
                 </a>
@@ -162,11 +151,34 @@
             </ul>
           </div>
 
+          <!-- MAP -->
+          <div class="p-2 overflow-hidden lg:col-span-2">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.151675546865!2d7.4164483751369055!3d10.488707064434653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104d354968884b09%3A0x10daecde84ce4edf!2sEesha%20plaza!5e0!3m2!1sen!2sng!4v1687521295940!5m2!1sen!2sng"
+              width="100%"
+              height="100%"
+              frameborder="0"
+              title="map"
+              marginheight="0"
+              marginwidth="0"
+              scrolling="no"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="px-4 pt-10 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div class="relative overflow-hidden bg-white rounded-lg">
+        <h2 class="sr-only">Contact Form</h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3">
           <!-- Contact form -->
-          <div class="px-6 py-10 sm:px-10 lg:col-span-2 xl:p-12">
+          <div class="px-6 py-10 sm:px-10 lg:col-span-3 xl:p-12">
             <h3 class="text-lg font-medium text-gray-900">Send us a message</h3>
             <form
-              action="http://localhost:8000/contact-us.php"
+              action="/forms/contact-us.php"
               method="POST"
               class="grid grid-cols-1 mt-6 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
               name="contact"
@@ -184,6 +196,12 @@
                     autocomplete="name"
                     class="block w-full px-4 py-3 text-gray-900 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary"
                   />
+                  <p
+                    class="mt-2 text-sm text-red-600"
+                    v-if="route.query?.success == 'false' && route.query?.fullname"
+                  >
+                    {{ route.query?.fullname }}
+                  </p>
                 </div>
               </div>
               <div>
@@ -196,6 +214,12 @@
                     autocomplete="email"
                     class="block w-full px-4 py-3 text-gray-900 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary"
                   />
+                  <p
+                    class="mt-2 text-sm text-red-600"
+                    v-if="route.query?.success == 'false' && route.query?.email"
+                  >
+                    {{ route.query?.email }}
+                  </p>
                 </div>
               </div>
               <div class="sm:col-span-2">
@@ -207,6 +231,12 @@
                     id="subject"
                     class="block w-full px-4 py-3 text-gray-900 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary"
                   />
+                  <p
+                    class="mt-2 text-sm text-red-600"
+                    v-if="route.query?.success == 'false' && route.query?.subject"
+                  >
+                    {{ route.query?.subject }}
+                  </p>
                 </div>
               </div>
               <div class="sm:col-span-2">
@@ -224,6 +254,12 @@
                     class="block w-full px-4 py-3 text-gray-900 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary"
                     aria-describedby="message-max"
                   />
+                  <p
+                    class="mt-2 text-sm text-red-600"
+                    v-if="route.query?.success == 'false' && route.query?.message"
+                  >
+                    {{ route.query?.message }}
+                  </p>
                 </div>
               </div>
               <div class="sm:col-span-2 sm:flex sm:justify-end">
@@ -239,11 +275,48 @@
         </div>
       </div>
     </div>
+    <TDialog v-model="openVideoDialog" @closed="$router.push({ query: null })">
+      <div
+        class="relative inline-block overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl opacity-100 rtl:text-right dark:bg-gray-900 sm:my-8 sm:align-middle"
+      >
+        <!-- This example requires Tailwind CSS v2.0+ -->
+        <div class="p-4 rounded-md bg-green-50">
+          <div class="flex">
+            <div class="flex-shrink-0">
+              <!-- Heroicon name: solid/check-circle -->
+              <svg
+                class="w-5 h-5 text-green-400"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div class="ml-3">
+              <div class="text-sm text-green-700">
+                <p>
+                  {{ route.query?.message }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </TDialog>
   </div>
 </template>
 
 <script setup>
 import { MailIcon, PhoneIcon, MapIcon } from '@heroicons/vue/outline'
+import TDialog from '../components/TDialog.vue'
+import { ref } from 'vue'
+import { useRoute } from 'vue-router'
 
 const socials = [
   {
@@ -265,6 +338,14 @@ const socials = [
     name: 'LinkedIn',
     href: 'https://www.linkedin.com/company/nimsy-agro-solar',
     icon: 'fab fa-linkedin-in'
+  },
+  {
+    name: 'Twitter',
+    href: 'https://twitter.com/nimsyagrosolar',
+    icon: 'fab fa-twitter'
   }
 ]
+
+const route = useRoute()
+const openVideoDialog = ref((route.query?.success == 'true' && !!route.query?.message) || false)
 </script>

@@ -47,7 +47,7 @@
                     </div>
                     <div class="mt-3 sm:mt-0 sm:ml-3">
                       <a
-                        href="#"
+                        :href="slide.demo"
                         class="flex items-center justify-center object-cover w-full px-8 py-3 text-base font-medium text-green-700 bg-green-100 border border-transparent rounded-md hover:bg-green-200 md:py-4 md:text-lg md:px-10"
                       >
                         Live demo
@@ -76,6 +76,14 @@
                     >
                     <span class="ml-4 text-sm">Find out more</span>
                     <ChevronRightIcon class="w-5 h-5 ml-2 text-gray-500" aria-hidden="true" />
+                  </a>
+                  <a
+                    :href="slide.demo"
+                    :to="{ name: 'services' }"
+                    class="inline-flex items-center p-1 pr-2 ml-3 text-white bg-red-700 rounded-full sm:text-base lg:text-sm xl:text-base hover:text-gray-200"
+                  >
+                    <span class="ml-4 text-sm">Demo</span>
+                    <PlayIcon class="w-5 h-5 ml-2 text-white" aria-hidden="true" />
                   </a>
                   <h1
                     class="mt-4 text-4xl font-extrabold tracking-tight text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl"
@@ -124,7 +132,7 @@
 
 <script setup>
 import '@splidejs/vue-splide/css/sea-green'
-import { ChevronRightIcon } from '@heroicons/vue/solid'
+import { ChevronRightIcon, PlayIcon } from '@heroicons/vue/solid'
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/vue-splide'
 import { ref } from 'vue'
 
@@ -133,13 +141,15 @@ const slides = ref([
     id: 'np1-solar-irrigation-pump',
     image: '/assets/img/slide-1.jpg',
     style: 1,
+    demo: 'https://www.youtube.com/watch?v=psXp6ounOto',
     title: 'Nimsy Solar Pump (NP1)',
-    info: 'Optimized for 1-2 acres of farm land, pumps up to 10,000 liters per hour, comes with a 300 watts foldable solar panel, battery back up and can be used to charge phones and lighten homes with led bulbs. '
+    info: 'Optimized for 1-2 acres of farm land, pumps up to 10,000 liters per hour, comes with a 300 watts foldable solar panel, battery back up and can be used to charge phones and lighten homes with led bulbs.'
   },
   {
     id: 'np2-solar-irrigation-pump',
     image: '/assets/img/slide-3.jpg',
     style: 2,
+    demo: 'https://www.youtube.com/watch?v=NnW_rDERu-w',
     title: 'Nimsy Solar Pump (NP 2)',
     info: 'Optimized for over 10 acres of farm land, pump up to 30,000 liters of water per hour, 900 watts retractable solar panel mounted on two-wheeled cart for easy mobility.'
   },
@@ -147,6 +157,7 @@ const slides = ref([
     id: 'solar-thresher',
     image: '/assets/img/slide-4.jpg',
     style: 1,
+    demo: 'https://www.youtube.com/watch?v=DjZfEEquksc',
     title: 'Nimsy Solar Thresher',
     info: 'Threshes 300kg of grains per hour particularly maize and rice, 1,200 watts retractable solar panel mounted on a four-wheeled cart for mobility, produces 2.5KVA of power and the excess are stored in batteries that can lighten 7 homes in off-grid rural communities. Waste products of maize cob and rice stalk are recycled into clean charcoal briquettes for cooking.'
   },
@@ -154,6 +165,7 @@ const slides = ref([
     id: 'solar-dryer',
     image: '/assets/img/slide-2.jpg',
     style: 2,
+    demo: 'https://www.youtube.com/watch?v=BbFBVyVA2WE',
     title: 'Nimsy Solar Dryer',
     info: 'Dries grains and vegetables faster and hygienically, equipped with 300 watts solar panel, air blower and drying compartment mounted on a four-wheeled cart for easy mobility.'
   }

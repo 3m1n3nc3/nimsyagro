@@ -7,13 +7,14 @@
         'bg-gray-50s': i % 2 === 0,
         'bg-whites': i % 2 === 1,
         'bg-gray-50': product.title,
-        'py-16 lg:py-24': product.title && !!products[i + 1]?.title,
+        'py-16 lg:py-18': product.title && !!products[i + 1]?.title,
         'py-4': !product.title,
-        'pb-10 pt-16 lg:pt-24': !products[i + 1]?.title
+        'pb-10 pt-16 lg:pt-24': !products[i + 1]?.title && i !== products.length - 1
       }"
       :key="product.title"
       v-if="product.models"
     >
+      <!-- 'py-16 lg:py-18': product.title && !!products[i + 1]?.title, -->
       <div class="relative max-w-xl px-4 mx-auto sm:px-6 lg:px-8 lg:max-w-7xl">
         <svg
           class="absolute hidden transform -translate-x-1/2 lg:block left-full -translate-y-1/4"
@@ -67,6 +68,16 @@
             <p class="mt-3 text-lg text-justify text-gray-500">
               {{ model.description }}
             </p>
+
+            <div class="my-3">
+              <a
+                :href="model.demo"
+                class="flex items-center justify-center w-1/3 px-3 py-2 text-base font-medium text-red-700 bg-red-100 border border-transparent border-red-700 rounded-md hover:bg-red-200 md:py-2 md:text-lg md:px-4"
+              >
+                <PlayIcon class="w-5 h-5 ml-2 text-red-700" aria-hidden="true" />
+                <span class="ml-4">Live Demo</span>
+              </a>
+            </div>
           </div>
 
           <div class="relative mt-10 -mx-4 lg:mt-0" aria-hidden="true">
@@ -107,12 +118,13 @@
       class="bg-gray-50"
       :class="{ 'py-5': i % 2 === 0 }"
       :key="product.title"
-      v-if="!product.models"
+      v-if="!product.models || !product.models.length"
     ></div>
   </template>
 </template>
 
 <script setup>
+import { PlayIcon } from '@heroicons/vue/solid'
 import { onMounted } from 'vue'
 
 // import { classnames } from 'tailwindcss-classnames'
@@ -136,6 +148,7 @@ const products = [
       {
         id: 'np1-solar-irrigation-pump',
         name: 'NP1 Solar Irrigation pump',
+        demo: 'https://www.youtube.com/watch?v=psXp6ounOto',
         description:
           'The NP1 Solar Irrigation pump which is optimized for 1-2 acres of farm land. It comes with 300 watts foldable solar panel, and it is designed with a battery to help farmers irrigate in moments of low sunlight and can be used to charge phone and lighten homes with led bulbs that comes with it. It can pump up to 10,000 liters per hour. We offer this on a pay-per- use, outright purchase or lease-to-own payment plan.',
         image: '/assets/img/slide-1.jpg'
@@ -143,6 +156,7 @@ const products = [
       {
         id: 'np2-solar-irrigation-pump',
         name: 'NP2 Solar Irrigation pump',
+        demo: 'https://www.youtube.com/watch?v=NnW_rDERu-w',
         description:
           'The NP 2 Solar Irrigation pump is the bigger sized solar water pump which is optimized for over 10 acres of farm land. It is designed with two wheeled cart for easy mobility and a retractable 900 watts solar panel enough to pump up to 30,000 liters of water per hour. We offer this on a pay-per-use, outright purchase or lease-to-own payment plan.',
         image: '/assets/img/slide-3.jpg'
@@ -150,25 +164,29 @@ const products = [
     ]
   },
   {
-    title: null,
-    description: null,
+    title: 'Threshers',
+    description:
+      'Our solar threshers are designed to thresh grains faster and produce electricity to power homes.',
     models: [
       {
         id: 'solar-thresher',
         name: 'Solar Thresher',
+        demo: 'https://www.youtube.com/watch?v=DjZfEEquksc',
         description: `We build solar thresher and provide smallholder farmers with on-demand solar threshing service on per-per-use model with our solar grain thresher which has the ability to thresh 300kg of grains per hour particularly maize and rice... Our thresher produces 2.5KVA of power and the excess are stored in batteries that can lighten 7 homes in off-grid rural communities.`,
         image: '/assets/img/slide-4.jpg'
       }
     ]
   },
-  {},
+  // {},
   {
-    title: null,
-    description: null,
+    title: 'Dryers',
+    description:
+      'Our solar dryers are designed to dry vegetables and grains faster and hygienically to reduce post-harvest losses suffered by farmers.',
     models: [
       {
         id: 'solar-dryer',
         name: 'Solar Dryer',
+        demo: 'https://www.youtube.com/watch?v=BbFBVyVA2WE',
         description: `We build solar dryer and provide smallholder farmers with on-demand solar drying service on pay-per-use model, it can dry vegetables and grains faster and hygienically to reduce post-harvest losses suffered by farmers.`,
         image: '/assets/img/slide-2.jpg'
       }

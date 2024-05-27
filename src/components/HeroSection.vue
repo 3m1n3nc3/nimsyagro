@@ -46,7 +46,7 @@
             </div>
           </div>
         </div>
-        <div class="relative py-5 mt-10 md:mt-0 md:w-2/5 lg:w-3/5">
+        <div class="relative py-5 mt-10 bg-gray-50 md:mt-0 md:w-2/5 lg:w-3/5">
           <div class="flex justify-center md:-ml-6 rounded-3xl bg-gray-50 md:-mr-72 lg:mr-0">
             <img
               class="object-contain object-left p-10 h-96"

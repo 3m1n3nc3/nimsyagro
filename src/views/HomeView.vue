@@ -5,7 +5,7 @@ import { impactPotential } from '@/utils/content'
 
 <template>
   <main class="mb-40">
-    <div class="dark:bg-darker lg:overflow-auto" id="home">
+    <div class="border-b dark:bg-darker lg:overflow-auto border-black/20" id="home">
       <div class="max-w-6xl px-6 mx-auto md:px-12 lg:px-6 xl:px-0">
         <div class="relative pt-24 ml-auto xl:pt-36">
           <HeroSection />
@@ -48,8 +48,8 @@ import { impactPotential } from '@/utils/content'
                 class="relative flex flex-col items-center justify-center h-full gap-6 p-8 py-16 lg:py-8"
               >
                 <img
-                  class="w-16"
-                  src="@/assets/icons/field.png"
+                  class="w-32"
+                  src="@/assets/images/business_chat.svg"
                   alt="field icon illustration"
                   width="512"
                   height="512"
@@ -155,10 +155,10 @@ import { impactPotential } from '@/utils/content'
         <div
           class="flex-row-reverse items-center justify-between space-y-12 text-gray-600 md:flex md:gap-6 lg:gap-12 lg:space-y-0"
         >
-          <div class="relative h-full ml-auto md:w-1/2">
+          <div class="relative flex items-center justify-center h-full ml-auto md:w-1/2">
             <img
               class="overflow-hidden rounded-3xl"
-              src="@/assets/images/panels.jpg"
+              src="@/assets/images/farmers-using-smart-device-for-crop-monitoring.svg"
               alt="app milestone"
               width="1174"
               height="1134"
@@ -243,35 +243,37 @@ import { impactPotential } from '@/utils/content'
           >
             <img src="@/assets/images/sdg.png" alt="SDG Banner" class="h-8 max-w-sm" />
           </div>
-          <div class="relative grid justify-center grid-cols-1 gap-6 mt-12 md:grid-cols-3">
+          <div class="relative grid justify-center grid-cols-1 gap-6 mt-12 md:grid-cols-4">
             <div
-              class="relative p-px overflow-hidden rounded-2xl bg-gradient-to-b from-gray-200 to-white dark:from-gray-700 dark:via-gray-800 dark:to-darker wow fadeInRight"
-              data-wow-duration=".6s"
-              :data-wow-delay="`.${2 + i}s`"
-              :class="{
-                'col-span-3 self-center': i === impactPotential.length - 1,
-                'col-span-3 md:col-span-1': i !== impactPotential.length - 1
-              }"
+              class="col-span-2 px-1 m-auto text-gray-600 xl:container wow"
+              data-wow-duration="1s"
+              :class="{ fadeInRight: !(i % 2), fadeInLeft: !!(i % 2) }"
+              :data-wow-delay="`.${1 + i}s`"
               :key="potential.title"
               v-for="(potential, i) in impactPotential"
             >
               <div
-                class="relative flex flex-col h-full gap-6 p-8 bg-gray-100 rounded-2xl dark:bg-gray-900"
+                class="lg:bg-gray-50 dark:lg:bg-darker relative overflow-hidden lg:p-16 rounded-[4rem] space-y-6 md:flex md:gap-6 justify-center md:space-y-0 lg:items-center"
               >
                 <img
-                  class="w-10 overflow-hidden rounded-md"
-                  alt="safety icon illustration"
-                  height="512"
-                  width="512"
+                  class="m max-w-[80%] absolute top-0 left-0 opacity-20"
+                  alt="image"
+                  loading="lazy"
                   :src="potential.image"
                 />
-                <div>
-                  <h4 class="text-xl font-semibold text-gray-900 dark:text-white">
+                <div class="flex justify-center md:5/12 lg:w-2/5" v-if="i % 2">
+                  <img class="max-w-[80%]" alt="image" loading="lazy" :src="potential.image2" />
+                </div>
+                <div class="md:7/12 lg:w-3/5">
+                  <h2 class="text-3xl font-bold text-gray-900 md:text-4xl dark:text-white">
                     {{ potential.title }}
-                  </h4>
-                  <p class="mt-3 text-gray-600 dark:text-gray-400">
+                  </h2>
+                  <p class="my-8 text-gray-600 dark:text-gray-300">
                     {{ potential.info }}
                   </p>
+                </div>
+                <div class="flex justify-center md:5/12 lg:w-2/5" v-if="!(i % 2)">
+                  <img class="max-w-[80%]" alt="image" loading="lazy" :src="potential.image2" />
                 </div>
               </div>
             </div>

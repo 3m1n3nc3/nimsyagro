@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="py-12 bg-gradient-to-b from-transparent to-gray-100 dark:to-gray-900 wow fadeInUp"
+    class="py-12 bg-gradient-to-b from-transparent to-black wow fadeInUp"
     data-wow-duration="1s"
     data-wow-delay=".6s"
   >
@@ -17,52 +17,44 @@
 
       <ul
         role="list"
-        class="flex flex-wrap items-center justify-center gap-4 py-4 mt-8 text-gray-600 dark:text-gray-400 sm:gap-8"
+        class="flex flex-wrap items-center justify-center gap-4 py-4 mt-8 text-white sm:gap-8"
       >
         <li role="listitem">
-          <RouterLink
-            :to="{ name: 'home' }"
-            class="px-0 duration-300 hover:text-primary dark:hover:text-white"
+          <RouterLink :to="{ name: 'home' }" class="px-0 duration-300 hover:text-primary"
             >Home</RouterLink
           >
         </li>
         <li role="listitem">
-          <RouterLink
-            :to="{ name: 'products' }"
-            class="px-0 duration-300 hover:text-primary dark:hover:text-white"
+          <RouterLink :to="{ name: 'products' }" class="px-0 duration-300 hover:text-primary"
             >Products</RouterLink
           >
         </li>
         <li role="listitem">
-          <RouterLink
-            :to="{ name: 'gallery' }"
-            class="px-0 duration-300 hover:text-primary dark:hover:text-white"
+          <RouterLink :to="{ name: 'gallery' }" class="px-0 duration-300 hover:text-primary"
             >Gallery</RouterLink
           >
         </li>
         <li role="listitem">
-          <RouterLink
-            :to="{ name: 'contact' }"
-            class="px-0 duration-300 hover:text-primary dark:hover:text-white"
+          <RouterLink :to="{ name: 'contact' }" class="px-0 duration-300 hover:text-primary"
             >Contact Us</RouterLink
           >
         </li>
-        <li role="listitem">
+        <!-- <li role="listitem">
           <RouterLink
             :to="{ name: 'request' }"
             class="px-0 duration-300 hover:text-primary dark:hover:text-white"
             >Request Service</RouterLink
           >
-        </li>
+        </li> -->
       </ul>
 
-      <div class="flex items-center justify-between gap-0 m-auto space-x-4 text-gray-500 w-max">
+      <div class="flex items-center justify-between gap-0 m-auto space-x-4 text-white w-max">
         <a
-          class="px-0 duration-300 hover:text-gray-600 dark:hover:text-white"
+          class="px-0 duration-300 hover:text-gray-200"
           target="blank"
           :href="social.link"
-          :title="social.title"
-          :aria-label="social.title"
+          :title="social.name"
+          :aria-label="social.name"
           :key="social.name"
           v-for="social in socials"
         >
@@ -71,7 +63,7 @@
       </div>
 
       <div class="mt-8 text-center">
-        <span class="text-sm font-thin tracking-wide text-gray-500"
+        <span class="text-sm font-thin tracking-wide text-white"
           >Copyright © NimsyAgro {{ new Date().getFullYear() }} - Present | All rights
           reserved</span
         >

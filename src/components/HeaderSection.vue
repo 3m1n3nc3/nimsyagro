@@ -1,9 +1,7 @@
 <template>
   <header>
-    <nav
-      class="fixed top-0 z-10 w-full bg-white border-b border-black/5 dark:border-white/5 lg:border-transparent"
-    >
-      <div class="px-6 mx-auto shadow-md md:px-12 lg:px-6 xl:px-0">
+    <nav class="fixed top-0 z-10 w-full bg-white border-b border-black/20">
+      <div class="px-6 mx-auto md:px-12 lg:px-6 xl:px-0">
         <div
           class="relative flex flex-wrap items-center justify-between gap-6 py-2 mx-6 md:gap-0 md:py-4"
         >
@@ -79,7 +77,7 @@
                     class="flex items-center transition hover:text-primary dark:hover:text-white md:px-4"
                     :to="{ name: 'products' }"
                   >
-                    <span class="text-base lg:text-sm lg:font-thin">Products</span>
+                    <span class="text-base lg:text-sm lg:font-thin">Services</span>
                   </RouterLink>
                 </li>
                 <li>
@@ -91,24 +89,24 @@
                     <span class="text-base lg:text-sm lg:font-thin">Gallery</span>
                   </RouterLink>
                 </li>
-                <li>
+                <!-- <li>
                   <RouterLink
                     exact-active-class="font-bold text-primary"
                     class="flex items-center transition hover:text-primary dark:hover:text-white md:px-4"
-                    :to="{ name: 'contact' }"
+                    :to="{ name: 'request' }"
                   >
-                    <span class="text-base lg:text-sm lg:font-thin">Contact Us</span>
+                    <span class="text-base lg:text-sm lg:font-thin">Request Service</span>
                   </RouterLink>
-                </li>
+                </li> -->
               </ul>
             </div>
 
             <div class="mt-12 lg:mt-0">
               <RouterLink
-                :to="{ name: 'request' }"
+                :to="{ name: 'contact' }"
                 class="relative flex items-center justify-center w-full px-4 h-9 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
               >
-                <span class="relative text-sm font-semibold text-white"> Request Service</span>
+                <span class="relative text-sm font-semibold text-white"> Contact Us</span>
               </RouterLink>
             </div>
           </div>

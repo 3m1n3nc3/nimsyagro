@@ -2,6 +2,10 @@ import iconCleanEnergy from "@/assets/icons/clean-energy.png"
 import iconClimateAction from "@/assets/icons/climate-action.png"
 import iconNoHunger from "@/assets/icons/no-hunger.png"
 import iconNoPoverty from "@/assets/icons/no-poverty.png"
+import image21 from '@/assets/images/transfer_money.svg'
+import image22 from '@/assets/images/wind_turbine.svg'
+import image23 from '@/assets/images/environment-rafiki.svg'
+import image24 from '@/assets/images/healthy-food.svg'
 import slide1 from "@/assets/products/1_nimsy_solar_pumps.png"
 import slide1_o from "@/assets/products/1_nimsy_solar_pumps_o.png"
 import slide2 from "@/assets/products/2_nimsy_solar_thresher.png"
@@ -99,21 +103,25 @@ export const slides = [
 export const impactPotential = [
     {
         image: iconNoPoverty,
+        image2: image21,
         title: 'No Poverty',
         info: 'Improving farmers incoming and curtail high operating cost from using fuel agric equipment. Farmers will be able to save up to $52 monthly',
     },
     {
         image: iconCleanEnergy,
+        image2: image22,
         title: 'Affordable and Clean Energy',
         info: 'Small holder farmers will have access to our Affordable and Clean Energy agricultural equipment and services.',
     },
     {
         image: iconClimateAction,
+        image2: image23,
         title: 'Climate Action',
         info: 'Reducing over 500 Mt of carbon emission into the atmosphere, thus slowing down climate change.',
     },
     {
         image: iconNoHunger,
+        image2: image24,
         title: 'Zero Hunger',
         info: 'Increase food production through affordable irrigation and drying services to help farmers grow food all season and curtail high post harvest cost.',
     },

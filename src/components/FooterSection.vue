@@ -20,22 +20,24 @@
         class="flex flex-wrap items-center justify-center gap-4 py-4 mt-8 text-white sm:gap-8"
       >
         <li role="listitem">
-          <RouterLink :to="{ name: 'home' }" class="px-0 duration-300 hover:text-primary"
+          <RouterLink :to="{ name: 'home' }" class="px-0 text-lg duration-300 hover:text-primary"
             >Home</RouterLink
           >
         </li>
         <li role="listitem">
-          <RouterLink :to="{ name: 'products' }" class="px-0 duration-300 hover:text-primary"
+          <RouterLink
+            :to="{ name: 'products' }"
+            class="px-0 text-lg duration-300 hover:text-primary"
             >Products</RouterLink
           >
         </li>
         <li role="listitem">
-          <RouterLink :to="{ name: 'gallery' }" class="px-0 duration-300 hover:text-primary"
+          <RouterLink :to="{ name: 'gallery' }" class="px-0 text-lg duration-300 hover:text-primary"
             >Gallery</RouterLink
           >
         </li>
         <li role="listitem">
-          <RouterLink :to="{ name: 'contact' }" class="px-0 duration-300 hover:text-primary"
+          <RouterLink :to="{ name: 'contact' }" class="px-0 text-lg duration-300 hover:text-primary"
             >Contact Us</RouterLink
           >
         </li>
@@ -58,12 +60,12 @@
           :key="social.name"
           v-for="social in socials"
         >
-          <i class="w-5 m-auto" :class="social.icon"> </i>
+          <i class="w-8 h-8 m-auto" :class="social.icon"> </i>
         </a>
       </div>
 
       <div class="mt-8 text-center">
-        <span class="text-sm font-thin tracking-wide text-white"
+        <span class="tracking-wide text-white text-md"
           >Copyright © NimsyAgro {{ new Date().getFullYear() }} - Present | All rights
           reserved</span
         >

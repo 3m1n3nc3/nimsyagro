@@ -2,8 +2,8 @@
   <Splide :has-track="false" :options="options">
     <SplideTrack>
       <SplideSlide :key="slide.id" v-for="slide in slides">
-        <div class="gap-12 md:flex md:items-center">
-          <div class="mx-6 text-center md:mx-0 sm:px-12 md:w-2/3 md:px-0 md:text-left lg:w-1/2">
+        <div class="gap-12 lg:flex lg:items-center">
+          <div class="mx-6 text-center md:mx-0 sm:px-12 md:w-full lg:px-0 md:text-left lg:w-1/2">
             <h1
               class="text-5xl font-black md:text-6xl xl:text-7xl wow fadeInDown"
               data-wow-duration=".8s"
@@ -20,7 +20,7 @@
                 <span class="hidden md:inline-block">{{ limitWords(slide.info, 200) }}</span>
                 <span class="inline-block md:hidden">{{ limitWords(slide.info, 100) }}</span>
               </p>
-              <div class="flex justify-center gap-4 mt-5 md:mt-12 sm:gap-6 md:justify-start">
+              <div class="flex justify-center gap-4 mt-5 md:mt-12 sm:gap-6 lg:justify-start">
                 <a
                   class="relative flex items-center justify-center px-5 h-11 w-max before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 wow fadeInLeft"
                   data-wow-duration=".8s"
@@ -39,19 +39,16 @@
                   class="relative flex items-center justify-center px-5 h-11 w-max before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-primary/10 before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 wow fadeInRight"
                   data-wow-duration=".8s"
                   data-wow-delay=".5s"
-                  type="{type}"
                 >
                   <span class="relative w-max text-primary"> Learn more </span>
                 </RouterLink>
               </div>
             </div>
           </div>
-          <div class="relative px-5 py-2 mt-3 mb-14 md:mb-24 md:mt-0 md:w-2/5 lg:w-3/5">
-            <div
-              class="flex justify-center shadow-2xl md:-ml-6 rounded-3xl bg-gray-50 md:-mr-72 lg:mr-8"
-            >
+          <div class="relative px-5 py-2 mt-3 mb-14 lg:mb-24 lg:mt-0 lg:w-2/5 xl:w-3/5">
+            <div class="flex justify-center shadow-2xl rounded-3xl bg-gray-50 lg:mr-8">
               <img
-                class="object-contain object-left h-64 p-5 md:p-10 md:h-96"
+                class="object-contain object-left h-64 p-5 md:p-10 lg:h-96"
                 :src="slide.image_o"
                 width="auto"
                 height="400"
@@ -80,7 +77,7 @@ defineOptions({
 // const modules = [Pagination, Autoplay]
 const options = {
   rewind: true,
-  autoplay: true,
+  autoplay: false,
   arrows: false,
   type: 'loop'
 }

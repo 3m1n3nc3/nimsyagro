@@ -6,7 +6,7 @@ import { impactPotential } from '@/utils/content'
 <template>
   <main class="mb-40">
     <div class="pb-8 border-b lg:overflow-auto border-black/20" id="home">
-      <div class="max-w-6xl px-0 mx-auto md:px-12 lg:px-6 xl:px-0">
+      <div class="max-w-6xl px-0 mx-auto lg:px-6 xl:px-0">
         <div class="relative pt-24 ml-auto xl:pt-36">
           <HeroSection />
         </div>
@@ -221,7 +221,7 @@ import { impactPotential } from '@/utils/content'
           >
             <img src="@/assets/images/sdg.png" alt="SDG Banner" class="h-8 max-w-sm" />
           </div>
-          <div class="relative grid justify-center grid-cols-1 gap-6 mt-12 md:grid-cols-4">
+          <div class="relative grid justify-center grid-cols-1 gap-6 mt-12 lg:grid-cols-4">
             <div
               class="col-span-2 px-1 m-auto text-gray-600 xl:container wow"
               data-wow-duration="1s"
@@ -231,7 +231,7 @@ import { impactPotential } from '@/utils/content'
               v-for="(potential, i) in impactPotential"
             >
               <div
-                class="lg:from-green-500 lg:to-orange-100 bg-gradient-to-br relative overflow-hidden lg:p-10 rounded-[4rem] space-y-6 md:flex md:gap-6 justify-center md:space-y-0 lg:items-center"
+                class="from-green-500 to-orange-100 bg-gradient-to-br relative overflow-hidden p-4 rounded-3xl lg:p-10 lg:rounded-[4rem] space-y-6 md:flex md:gap-6 justify-center md:space-y-0 lg:items-center"
               >
                 <!-- <img
                   class="max-w-[80%] absolute top-0 opacity-10"
@@ -240,10 +240,10 @@ import { impactPotential } from '@/utils/content'
                   :class="{ 'left-0': !(i % 2), 'right-0': !!(i % 2) }"
                   :src="potential.image"
                 /> -->
-                <div class="flex justify-center md:5/12 lg:w-2/6" v-if="i % 2">
+                <div class="flex justify-center md:w-5/12 lg:w-2/6" v-if="i % 2">
                   <img class="max-w-[80%]" alt="image" loading="lazy" :src="potential.image2" />
                 </div>
-                <div class="md:7/12 lg:w-4/6">
+                <div class="md:w-7/12 lg:w-4/6">
                   <h2 class="text-3xl font-bold text-center text-gray-900 md:text-4xl md:text-left">
                     {{ potential.title }}
                   </h2>
@@ -251,7 +251,7 @@ import { impactPotential } from '@/utils/content'
                     {{ potential.info }}
                   </p>
                 </div>
-                <div class="flex justify-center md:5/12 lg:w-2/5" v-if="!(i % 2)">
+                <div class="flex justify-center md:w-5/12 lg:w-2/5" v-if="!(i % 2)">
                   <img class="max-w-[80%]" alt="image" loading="lazy" :src="potential.image2" />
                 </div>
               </div>

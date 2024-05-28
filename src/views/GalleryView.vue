@@ -1,16 +1,19 @@
 <script setup lang="ts">
-// import { ref } from 'vue'
+import { ref } from 'vue'
+import TDialog from 'components/TDialog.vue'
 import { register } from 'swiper/element/bundle'
 register()
 
 const loadImg = (index: number) => {
   return `/gallery/gallery_${index}.jpg`
 }
-// const groups = [
-//   [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-//   [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
-//   [24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34]
-// ]
+const viewing = ref('')
+const dialog = ref(false)
+const groups = [
+  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+  [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+  [24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34]
+]
 </script>
 
 <template>
@@ -25,8 +28,8 @@ const loadImg = (index: number) => {
 
     <div class="pt-5 text-gray-600 md:pt-5" id="reviews">
       <div class="max-w-6xl px-6 mx-auto md:px-12 lg:px-6 xl:px-0">
-        <div class="grid gap-6 mt-12 sm:grid-cols-2 md:mt-20 lg:grid-cols-3">
-          <div class="col-span-3">
+        <div class="grid grid-cols-2 gap-2 mt-12 md:mt-20 lg:grid-cols-3">
+          <div class="hidden col-span-3 md:block">
             <swiper-container
               style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
               class="w-full sm:w-2/3 mySwiper"
@@ -45,7 +48,7 @@ const loadImg = (index: number) => {
               </swiper-slide>
             </swiper-container>
           </div>
-          <div class="flex justify-center col-span-3">
+          <div class="justify-center hidden col-span-3 md:flex">
             <swiper-container
               class="w-full h-[5em] sm:w-2/3 mySwiper2 sm:h-[9em]"
               space-between="10"
@@ -62,9 +65,13 @@ const loadImg = (index: number) => {
               </swiper-slide>
             </swiper-container>
           </div>
-          <!-- <div :key="i" v-for="(grp, i) in groups">
+          <div
+            class="grid grid-cols-2 col-span-3 gap-2 md:hidden"
+            :key="i"
+            v-for="(grp, i) in groups"
+          >
             <div
-              class="relative p-px mb-6 overflow-hidden rounded-2xl bg-gradient-to-b from-gray-200 to-white dark:from-gray-700 dark:via-gray-800 dark:to-darker wow"
+              class="relative p-px mb-6 overflow-hidden rounded-2xl wow-"
               :class="`fadeIn${['Left', 'Up', 'Right'][i]}`"
               data-wow-duration="1s"
               data-wow-delay=".5s"
@@ -72,10 +79,10 @@ const loadImg = (index: number) => {
               v-for="index in grp"
             >
               <div
-                class="relative flex flex-col h-full gap-6 p-2 space-y-6 bg-gray-100 rounded-2xl dark:bg-gray-900"
+                class="relative flex flex-col h-full gap-2 p-2 space-y-6 bg-gray-100 rounded-2xl"
               >
                 <img
-                  class="object-cover w-full min-h-[24rem] h-full rounded-2xl max-h-64"
+                  class="object-cover w-full min-h-[10rem] h-full rounded-2xl max-h-44"
                   alt="user avatar"
                   width="400"
                   height="600"
@@ -85,14 +92,14 @@ const loadImg = (index: number) => {
                 />
               </div>
             </div>
-          </div> -->
+          </div>
         </div>
       </div>
     </div>
   </main>
-  <!-- <TDialog v-model="dialog">
+  <TDialog v-model="dialog">
     <div
-      class="relative inline-block p-2 overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl opacity-100 rtl:text-right dark:bg-gray-900 sm:my-8 sm:align-middle"
+      class="relative inline-block w-full p-2 overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl opacity-100 rtl:text-right sm:my-8 sm:align-middle"
     >
       <button
         class="absolute top-0 right-0 justify-center w-6 h-6 m-2 text-center text-white bg-red-500 rounded-full hover:opacity-80"
@@ -110,7 +117,7 @@ const loadImg = (index: number) => {
         />
       </div>
     </div>
-  </TDialog> -->
+  </TDialog>
 </template>
 
 <style>

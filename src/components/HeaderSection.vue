@@ -62,14 +62,14 @@
             class="absolute left-0 z-20 flex-col flex-wrap justify-end w-full gap-6 p-8 transition-all duration-300 origin-top-right translate-y-1 bg-white border border-gray-100 shadow-2xl top-full rounded-3xl shadow-gray-600/10 lg:visible lg:relative lg:flex lg:w-7/12 lg:translate-y-0 lg:scale-100 lg:flex-row lg:items-center lg:gap-0 lg:border-none lg:bg-transparent lg:p-0 lg:opacity-100 lg:shadow-none"
             :class="{ 'opacity-0 invisible': !toggleMobileMenu }"
           >
-            <div class="w-full text-white lg:w-auto lg:pr-4 lg:pt-0">
+            <div class="w-full text-primary md:text-white lg:w-auto lg:pr-4 lg:pt-0">
               <ul
                 class="flex flex-col gap-6 tracking-wide lg:flex-row lg:justify-center lg:gap-0 lg:text-sm"
               >
                 <li>
                   <RouterLink
                     class="flex items-center transition hover:opacity-80 md:px-4"
-                    exact-active-class="font-bold text-green-100"
+                    exact-active-class="font-bold text-green-800 md:text-green-100"
                     :to="{ name: 'home' }"
                   >
                     <span class="text-base lg:font-sm">Home</span>
@@ -77,7 +77,7 @@
                 </li>
                 <li>
                   <RouterLink
-                    exact-active-class="font-bold text-green-100"
+                    exact-active-class="font-bold text-green-800 md:text-green-100"
                     class="flex items-center transition hover:opacity-80 md:px-4"
                     :to="{ name: 'products' }"
                   >
@@ -86,7 +86,7 @@
                 </li>
                 <li>
                   <RouterLink
-                    exact-active-class="font-bold text-green-100"
+                    exact-active-class="font-bold text-green-800 md:text-green-100"
                     class="flex items-center transition hover:opacity-80 md:px-4"
                     :to="{ name: 'gallery' }"
                   >

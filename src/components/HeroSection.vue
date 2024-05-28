@@ -13,13 +13,14 @@
             </h1>
             <div class="">
               <p
-                class="mt-8 text-xl text-gray-700 wow fadeInUp"
+                class="mt-5 text-xl text-gray-700 md:mt-8 wow fadeInUp"
                 data-wow-duration=".8s"
                 data-wow-delay=".5s"
               >
-                {{ slide.info }}
+                <span class="hidden md:inline-block">{{ limitWords(slide.info, 200) }}</span>
+                <span class="inline-block md:hidden">{{ limitWords(slide.info, 100) }}</span>
               </p>
-              <div class="flex justify-center gap-4 mt-12 sm:gap-6 md:justify-start">
+              <div class="flex justify-center gap-4 mt-5 md:mt-12 sm:gap-6 md:justify-start">
                 <a
                   class="relative flex items-center justify-center px-5 h-11 w-max before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 wow fadeInLeft"
                   data-wow-duration=".8s"
@@ -45,12 +46,12 @@
               </div>
             </div>
           </div>
-          <div class="relative px-5 py-5 mt-10 md:mt-0 md:w-2/5 lg:w-3/5">
+          <div class="relative px-5 py-2 mt-3 mb-14 md:mb-24 md:mt-0 md:w-2/5 lg:w-3/5">
             <div
               class="flex justify-center shadow-2xl md:-ml-6 rounded-3xl bg-gray-50 md:-mr-72 lg:mr-8"
             >
               <img
-                class="object-contain object-left p-10 h-96"
+                class="object-contain object-left h-64 p-5 md:p-10 md:h-96"
                 :src="slide.image_o"
                 width="auto"
                 height="400"
@@ -82,6 +83,20 @@ const options = {
   autoplay: true,
   arrows: false,
   type: 'loop'
+}
+
+const limitWords = (text: string, numWords: number): string => {
+  if (numWords >= text.length) {
+    return text
+  }
+  const words = text.substring(0, numWords)
+
+  let o = words.substring(0, Math.min(words.length, words.lastIndexOf(' ')))
+
+  if (text.length > o.length) {
+    o += '...'
+  }
+  return o
 }
 </script>
 

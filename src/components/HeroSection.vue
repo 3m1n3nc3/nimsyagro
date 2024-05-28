@@ -5,19 +5,25 @@
         <div class="gap-12 md:flex md:items-center">
           <div class="mx-6 text-center md:mx-0 sm:px-12 md:w-2/3 md:px-0 md:text-left lg:w-1/2">
             <h1
-              class="text-5xl font-black dark:text-white md:text-6xl xl:text-7xl wow fadeInDown"
+              class="text-5xl font-black md:text-6xl xl:text-7xl wow fadeInDown"
               data-wow-duration=".8s"
               data-wow-delay=".5s"
             >
               {{ slide.title }}
             </h1>
             <div class="">
-              <p class="mt-8 text-xl text-gray-700 dark:text-gray-100">
+              <p
+                class="mt-8 text-xl text-gray-700 wow fadeInUp"
+                data-wow-duration=".8s"
+                data-wow-delay=".5s"
+              >
                 {{ slide.info }}
               </p>
               <div class="flex justify-center gap-4 mt-12 sm:gap-6 md:justify-start">
                 <a
-                  class="relative flex items-center justify-center px-5 h-11 w-max before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95"
+                  class="relative flex items-center justify-center px-5 h-11 w-max before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 wow fadeInLeft"
+                  data-wow-duration=".8s"
+                  data-wow-delay=".5s"
                   target="_blank"
                   :href="slide.demo"
                   v-if="slide.demo"
@@ -29,10 +35,12 @@
                 </a>
                 <RouterLink
                   :to="{ name: 'products', hash: '#' + slide.id }"
-                  class="relative flex items-center justify-center px-5 h-11 w-max before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-primary/10 before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800"
+                  class="relative flex items-center justify-center px-5 h-11 w-max before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-primary/10 before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 wow fadeInRight"
+                  data-wow-duration=".8s"
+                  data-wow-delay=".5s"
                   type="{type}"
                 >
-                  <span class="relative w-max text-primary dark:text-white"> Learn more </span>
+                  <span class="relative w-max text-primary"> Learn more </span>
                 </RouterLink>
               </div>
             </div>

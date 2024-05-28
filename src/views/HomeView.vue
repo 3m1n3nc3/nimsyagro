@@ -5,7 +5,7 @@ import { impactPotential } from '@/utils/content'
 
 <template>
   <main class="mb-40">
-    <div class="pb-8 border-b dark:bg-darker lg:overflow-auto border-black/20" id="home">
+    <div class="pb-8 border-b lg:overflow-auto border-black/20" id="home">
       <div class="max-w-6xl px-0 mx-auto md:px-12 lg:px-6 xl:px-0">
         <div class="relative pt-24 ml-auto xl:pt-36">
           <HeroSection />
@@ -19,25 +19,23 @@ import { impactPotential } from '@/utils/content'
           <h2 class="text-3xl font-bold text-center text-gray-900 md:text-4xl lg:text-5xl">
             The Problem we solve
           </h2>
-          <p class="mt-4 text-center text-gray-600 dark:text-gray-300">
+          <p class="mt-4 text-center text-gray-600">
             We are making mechanization accessible to everyone.
           </p>
         </div>
 
         <div class="mt-16 md:mt-20 wow slideInUp" data-wow-duration=".6s" data-wow-delay=".2s">
           <div
-            class="relative grid p-1 border border-gray-200 rounded-3xl dark:border-gray-800 lg:grid-cols-2"
+            class="relative grid p-1 overflow-hidden border border-gray-200 rounded-3xl lg:grid-cols-2"
           >
-            <div class="absolute inset-0 hidden h-max dark:block lg:my-auto">
+            <div class="absolute inset-0 h-max lg:my-auto">
               <div
                 aria-hidden="true"
-                class="grid grid-cols-2 opacity-50 -space-x-52 dark:opacity-70 2xl:mx-auto 2xl:max-w-6xl"
+                class="grid grid-cols-2 opacity-20 -space-x-52 2xl:mx-auto 2xl:max-w-6xl"
               >
+                <div class="h-60 bg-gradient-to-br from-primary to-orange-400 blur-3xl"></div>
                 <div
-                  class="h-60 bg-gradient-to-br from-primary to-purple-400 blur-3xl dark:from-blue-700"
-                ></div>
-                <div
-                  class="rounded-full h-72 bg-gradient-to-r from-cyan-400 to-sky-300 blur-3xl dark:from-transparent dark:to-indigo-600"
+                  class="rounded-full h-72 bg-gradient-to-tr from-cyan-400 to-primary blur-3xl"
                 ></div>
               </div>
             </div>
@@ -55,7 +53,7 @@ import { impactPotential } from '@/utils/content'
                 />
                 <div class="mx-auto text-center sm:w-4/5">
                   <h2 class="text-xl font-semibold text-gray-900">Providing Access</h2>
-                  <p class="mt-3 text-gray-600">
+                  <p class="mt-3 text-lg text-gray-700">
                     Low access to mechanized agro equipment for irrigation and processing by farmers
                     in rural communities is a big problem that leads poor productivity, poverty,
                     hunger and post-harvest losses in Nigeria. Available mechanized options are
@@ -87,7 +85,7 @@ import { impactPotential } from '@/utils/content'
               <div
                 class="flex flex-col gap-6 p-8 text-white transition duration-300 rounded-2xl hover:text-green-800 hover:bg-white hover:shadow-2xl hover:shadow-gray-600/10"
               >
-                <div class="flex w-10 h-10 border border-gray-200 rounded dark:border-gray-700">
+                <div class="flex w-10 h-10 border border-gray-200 rounded">
                   <i class="m-auto fa-brands fa-pagelines"></i>
                 </div>
                 <div>
@@ -102,7 +100,7 @@ import { impactPotential } from '@/utils/content'
               <div
                 class="flex flex-col gap-6 p-8 text-white transition duration-300 rounded-2xl hover:bg-white hover:shadow-2xl hover:shadow-gray-600/10 hover:text-green-800"
               >
-                <div class="flex w-10 h-10 border border-gray-200 rounded dark:border-gray-700">
+                <div class="flex w-10 h-10 border border-gray-200 rounded">
                   <i class="m-auto fa-solid fa-truck-ramp-box"></i>
                 </div>
                 <div>
@@ -116,7 +114,7 @@ import { impactPotential } from '@/utils/content'
               <div
                 class="flex flex-col gap-6 p-8 text-white transition duration-300 rounded-2xl hover:bg-white hover:shadow-2xl hover:shadow-gray-600/10 hover:text-green-800"
               >
-                <div class="flex w-10 h-10 border border-gray-200 rounded dark:border-gray-700">
+                <div class="flex w-10 h-10 border border-gray-200 rounded">
                   <i class="m-auto fa-brands fa-leanpub"></i>
                 </div>
                 <div>
@@ -162,7 +160,7 @@ import { impactPotential } from '@/utils/content'
               Our Solution
             </h2>
             <p
-              class="my-12 text-gray-600 dark:text-gray-300 wow fadeInRight"
+              class="my-12 text-gray-600 wow fadeInRight"
               data-wow-duration="2s"
               data-wow-delay=".3s"
             >
@@ -170,16 +168,14 @@ import { impactPotential } from '@/utils/content'
               irrigation, grain threshing, milling and drying services on a pay-per-use model that
               can be easily accessible to them through our rural solar hubs.
             </p>
-            <div class="space-y-4 divide-y divide-gray-100 dark:divide-gray-800">
+            <div class="space-y-4 divide-y divide-gray-100">
               <div
                 class="flex gap-4 mt-8 md:items-center wow fadeInUp"
                 data-wow-duration="2s"
                 data-wow-delay=".3s"
               >
-                <div
-                  class="flex w-12 h-12 gap-4 border border-gray-200 rounded dark:border-gray-900"
-                >
-                  <i class="m-auto text-gray-700 fa-solid fa-water dark:text-gray-300"></i>
+                <div class="flex w-12 h-12 gap-4 border border-gray-200 rounded">
+                  <i class="m-auto text-gray-700 fa-solid fa-water"></i>
                 </div>
                 <div class="w-5/6">
                   <h3 class="text-lg font-semibold text-gray-700">
@@ -196,12 +192,8 @@ import { impactPotential } from '@/utils/content'
                 data-wow-duration="2s"
                 data-wow-delay=".4s"
               >
-                <div
-                  class="flex w-12 h-12 gap-4 border border-gray-200 rounded dark:border-gray-900"
-                >
-                  <i
-                    class="m-auto text-gray-700 fa-solid fa-money-bill-wheat dark:text-gray-300"
-                  ></i>
+                <div class="flex w-12 h-12 gap-4 border border-gray-200 rounded">
+                  <i class="m-auto text-gray-700 fa-solid fa-money-bill-wheat"></i>
                 </div>
                 <div class="w-5/6">
                   <h3 class="text-lg font-semibold text-gray-700">Transform Your Harvest</h3>
@@ -239,23 +231,23 @@ import { impactPotential } from '@/utils/content'
               v-for="(potential, i) in impactPotential"
             >
               <div
-                class="lg:bg-gray-50 dark:lg:bg-darker relative overflow-hidden lg:p-16 rounded-[4rem] space-y-6 md:flex md:gap-6 justify-center md:space-y-0 lg:items-center"
+                class="lg:from-green-500 lg:to-orange-100 bg-gradient-to-br relative overflow-hidden lg:p-10 rounded-[4rem] space-y-6 md:flex md:gap-6 justify-center md:space-y-0 lg:items-center"
               >
-                <img
+                <!-- <img
                   class="max-w-[80%] absolute top-0 opacity-10"
                   alt="image"
                   loading="lazy"
                   :class="{ 'left-0': !(i % 2), 'right-0': !!(i % 2) }"
                   :src="potential.image"
-                />
-                <div class="flex justify-center md:5/12 lg:w-2/5" v-if="i % 2">
+                /> -->
+                <div class="flex justify-center md:5/12 lg:w-2/6" v-if="i % 2">
                   <img class="max-w-[80%]" alt="image" loading="lazy" :src="potential.image2" />
                 </div>
-                <div class="md:7/12 lg:w-3/5">
+                <div class="md:7/12 lg:w-4/6">
                   <h2 class="text-3xl font-bold text-center text-gray-900 md:text-4xl md:text-left">
                     {{ potential.title }}
                   </h2>
-                  <p class="my-8 text-center text-gray-600 dark:text-gray-300 md:text-left">
+                  <p class="my-8 text-xl text-center text-gray-800 md:text-left">
                     {{ potential.info }}
                   </p>
                 </div>

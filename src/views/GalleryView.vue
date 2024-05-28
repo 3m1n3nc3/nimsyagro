@@ -15,15 +15,15 @@ const loadImg = (index: number) => {
 
 <template>
   <main class="mb-40">
-    <div class="dark:bg-darker" id="home">
+    <div id="home">
       <div class="max-w-6xl px-6 mx-auto md:px-12 lg:px-6 xl:px-0">
         <div class="relative pt-40 ml-auto xl:pt-36">
-          <h1 class="text-5xl font-black dark:text-white md:text-6xl xl:text-7xl">Gallery</h1>
+          <h1 class="text-5xl font-black md:text-6xl xl:text-7xl">Gallery</h1>
         </div>
       </div>
     </div>
 
-    <div class="pt-5 text-gray-600 dark:text-gray-300 md:pt-5" id="reviews">
+    <div class="pt-5 text-gray-600 md:pt-5" id="reviews">
       <div class="max-w-6xl px-6 mx-auto md:px-12 lg:px-6 xl:px-0">
         <div class="grid gap-6 mt-12 sm:grid-cols-2 md:mt-20 lg:grid-cols-3">
           <div class="col-span-3">

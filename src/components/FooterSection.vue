@@ -7,10 +7,7 @@
     <div class="flex flex-col items-center max-w-6xl px-6 mx-auto md:px-12 lg:px-6 xl:px-0">
       <a href="#home" aria-label="logo" class="flex items-center justify-center space-x-2">
         <div aria-hidden="true" class="flex flex-col space-y-0.5">
-          <img
-            src="@/assets/logo.png"
-            class="w-12 overflow-hidden bg-gray-900 rounded-lg dark:bg-white"
-          />
+          <img src="@/assets/logo.png" class="w-12 overflow-hidden bg-gray-900 rounded-lg" />
         </div>
         <span class="text-2xl font-bold text-white">NimsyAgro</span>
       </a>
@@ -44,7 +41,7 @@
         <!-- <li role="listitem">
           <RouterLink
             :to="{ name: 'request' }"
-            class="px-0 duration-300 hover:text-primary dark:hover:text-white"
+            class="px-0 duration-300 hover:text-primary "
             >Request Service</RouterLink
           >
         </li> -->

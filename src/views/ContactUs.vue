@@ -1,14 +1,10 @@
 <template>
   <div class="py-24 lg:py-32">
     <div class="mx-auto md:w-3/5 wow fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
-      <h2
-        class="text-3xl font-bold text-center text-gray-900 dark:text-white md:text-4xl lg:text-5xl"
-      >
+      <h2 class="text-3xl font-bold text-center text-gray-900 md:text-4xl lg:text-5xl">
         Contact Us
       </h2>
-      <p class="mt-4 text-center text-gray-600 dark:text-gray-300">
-        Need help? We're always here for you.
-      </p>
+      <p class="mt-4 text-center text-gray-600">Need help? We're always here for you.</p>
     </div>
     <div class="px-4 pt-16 mx-auto max-w-7xl sm:pt-24 sm:px-6 lg:px-8">
       <div class="relative overflow-hidden bg-white rounded-lg">
@@ -293,9 +289,9 @@
         </div>
       </div>
     </div>
-    <TDialog v-model="openVideoDialog" @closed="$router.push({ query: null })">
+    <TDialog v-model="openVideoDialog" @closed="$router.push({ query: {} })">
       <div
-        class="relative inline-block overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl opacity-100 rtl:text-right dark:bg-gray-900 sm:my-8 sm:align-middle"
+        class="relative inline-block overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl opacity-100 rtl:text-right sm:my-8 sm:align-middle"
       >
         <!-- This example requires Tailwind CSS v2.0+ -->
         <div class="p-4 rounded-md bg-green-50">

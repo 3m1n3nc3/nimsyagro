@@ -46,12 +46,10 @@
         <rect width="404" height="404" fill="url(#85737c0e-0916-41d7-917f-596dc7edfa27)" />
       </svg>
       <div class="mx-auto md:w-3/5 wow fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
-        <h2
-          class="text-3xl font-bold text-center text-gray-900 dark:text-white md:text-4xl lg:text-5xl"
-        >
+        <h2 class="text-3xl font-bold text-center text-gray-900 md:text-4xl lg:text-5xl">
           Request For Our Services
         </h2>
-        <p class="mt-4 text-center text-gray-600 dark:text-gray-300">
+        <p class="mt-4 text-center text-gray-600">
           Request for services and we will get back to you as soon as possible.
         </p>
       </div>

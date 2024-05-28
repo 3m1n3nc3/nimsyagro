@@ -4,10 +4,10 @@ import { slides } from '@/utils/content'
 
 <template>
   <main class="mb-20">
-    <div class="dark:bg-darker" id="home">
+    <div id="home">
       <div class="max-w-6xl px-6 mx-auto md:px-12 lg:px-6 xl:px-0">
         <div class="relative pt-40 ml-auto xl:pt-36">
-          <h1 class="text-5xl font-black dark:text-white md:text-6xl xl:text-7xl">Our Products</h1>
+          <h1 class="text-5xl font-black md:text-6xl xl:text-7xl">Our Products</h1>
         </div>
       </div>
     </div>
@@ -24,14 +24,12 @@ import { slides } from '@/utils/content'
           >
             <div
               aria-hidden="true"
-              class="absolute inset-0 grid w-3/5 grid-cols-2 m-auto h-3/5 -space-x-52 opacity-40 dark:opacity-60"
+              class="absolute inset-0 grid w-3/5 grid-cols-2 m-auto h-3/5 -space-x-52 opacity-40"
             >
               <div
-                class="h-full rounded-full bg-gradient-to-br from-primary to-purple-400 blur-[106px] dark:from-blue-700"
+                class="h-full rounded-full bg-gradient-to-br from-primary to-purple-400 blur-[106px]"
               ></div>
-              <div
-                class="h-full bg-gradient-to-r from-cyan-400 to-primary blur-[106px] dark:to-indigo-600"
-              ></div>
+              <div class="h-full bg-gradient-to-r from-cyan-400 to-primary blur-[106px]"></div>
             </div>
             <img
               class="relative h-52"
@@ -43,14 +41,14 @@ import { slides } from '@/utils/content'
           </div>
           <div class="h-full ml-auto text-center md:text-left md:w-1/2">
             <h3
-              class="text-2xl font-bold text-gray-900 dark:text-white md:text-3xl lg:text-4xl wow fadeInRight"
+              class="text-2xl font-bold text-gray-900 md:text-3xl lg:text-4xl wow fadeInRight"
               data-wow-duration="1s"
               data-wow-delay=".6s"
             >
               {{ slide.title }}
             </h3>
             <p
-              class="my-6 text-gray-600 dark:text-gray-300 wow fadeInRight"
+              class="my-6 text-gray-600 wow fadeInRight"
               data-wow-duration="1s"
               data-wow-delay=".7s"
             >

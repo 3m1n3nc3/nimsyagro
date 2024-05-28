@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="py-12 bg-gradient-to-b from-transparent to-black wow fadeInUp"
+    class="py-12 bg-gradient-to-tl from-gray-700 to-black wow fadeInUp"
     data-wow-duration="1s"
     data-wow-delay=".6s"
   >
@@ -12,7 +12,7 @@
             class="w-12 overflow-hidden bg-gray-900 rounded-lg dark:bg-white"
           />
         </div>
-        <span class="text-2xl font-bold text-primary dark:text-white">NimsyAgro</span>
+        <span class="text-2xl font-bold text-white">NimsyAgro</span>
       </a>
 
       <ul

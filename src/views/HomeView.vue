@@ -5,8 +5,8 @@ import { impactPotential } from '@/utils/content'
 
 <template>
   <main class="mb-40">
-    <div class="border-b dark:bg-darker lg:overflow-auto border-black/20" id="home">
-      <div class="max-w-6xl px-6 mx-auto md:px-12 lg:px-6 xl:px-0">
+    <div class="pb-8 border-b dark:bg-darker lg:overflow-auto border-black/20" id="home">
+      <div class="max-w-6xl px-0 mx-auto md:px-12 lg:px-6 xl:px-0">
         <div class="relative pt-24 ml-auto xl:pt-36">
           <HeroSection />
         </div>
@@ -16,9 +16,7 @@ import { impactPotential } from '@/utils/content'
     <div class="relative pt-12 md:pt-20" id="features">
       <div class="max-w-6xl px-6 mx-auto md:px-12 lg:px-6 xl:px-0">
         <div class="mx-auto md:w-3/5 wow fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
-          <h2
-            class="text-3xl font-bold text-center text-gray-900 dark:text-white md:text-4xl lg:text-5xl"
-          >
+          <h2 class="text-3xl font-bold text-center text-gray-900 md:text-4xl lg:text-5xl">
             The Problem we solve
           </h2>
           <p class="mt-4 text-center text-gray-600 dark:text-gray-300">
@@ -56,10 +54,8 @@ import { impactPotential } from '@/utils/content'
                   loading="lazy"
                 />
                 <div class="mx-auto text-center sm:w-4/5">
-                  <h2 class="text-xl font-semibold text-gray-900 dark:text-white">
-                    Providing Access
-                  </h2>
-                  <p class="mt-3 text-gray-600 dark:text-gray-400">
+                  <h2 class="text-xl font-semibold text-gray-900">Providing Access</h2>
+                  <p class="mt-3 text-gray-600">
                     Low access to mechanized agro equipment for irrigation and processing by farmers
                     in rural communities is a big problem that leads poor productivity, poverty,
                     hunger and post-harvest losses in Nigeria. Available mechanized options are
@@ -71,19 +67,17 @@ import { impactPotential } from '@/utils/content'
               </div>
             </div>
             <div
-              class="relative grid overflow-hidden rounded-[1.25rem] bg-gray-100 p-1 dark:bg-gray-800/50 sm:grid-cols-2"
+              class="relative grid overflow-hidden rounded-[1.25rem] bg-green-800 p-1 sm:grid-cols-2"
             >
               <div
-                class="flex flex-col gap-6 p-8 transition duration-300 rounded-2xl hover:bg-white hover:shadow-2xl hover:shadow-gray-600/10 dark:hover:bg-gray-700/60 dark:hover:shadow-none"
+                class="flex flex-col gap-6 p-8 text-white transition duration-300 rounded-2xl hover:text-green-800 hover:bg-white hover:shadow-2xl hover:shadow-gray-600/10"
               >
-                <div class="flex w-10 h-10 border border-gray-200 rounded dark:border-gray-700">
-                  <i class="m-auto text-gray-700 fa-solid fa-solar-panel dark:text-white"></i>
+                <div class="flex w-10 h-10 border border-gray-200 rounded">
+                  <i class="m-auto fa-solid fa-solar-panel"></i>
                 </div>
                 <div>
-                  <h2 class="text-xl font-semibold text-gray-900 dark:text-white">
-                    Solar-Powered Irrigation
-                  </h2>
-                  <p class="mt-3 text-gray-600 dark:text-gray-400">
+                  <h2 class="text-xl font-semibold">Solar-Powered Irrigation</h2>
+                  <p class="mt-3">
                     Reliable, cost-effective solar irrigation systems to boost your crop yields
                     sustainably.
                   </p>
@@ -91,16 +85,14 @@ import { impactPotential } from '@/utils/content'
               </div>
 
               <div
-                class="flex flex-col gap-6 p-8 transition duration-300 rounded-2xl hover:bg-white hover:shadow-2xl hover:shadow-gray-600/10 dark:hover:bg-gray-700/60 dark:hover:shadow-none"
+                class="flex flex-col gap-6 p-8 text-white transition duration-300 rounded-2xl hover:text-green-800 hover:bg-white hover:shadow-2xl hover:shadow-gray-600/10"
               >
                 <div class="flex w-10 h-10 border border-gray-200 rounded dark:border-gray-700">
-                  <i class="m-auto text-gray-700 fa-brands fa-pagelines dark:text-white"></i>
+                  <i class="m-auto fa-brands fa-pagelines"></i>
                 </div>
                 <div>
-                  <h2 class="text-xl font-semibold text-gray-900 dark:text-white">
-                    Green Processing Units
-                  </h2>
-                  <p class="mt-3 text-gray-600 dark:text-gray-400">
+                  <h2 class="text-xl font-semibold">Green Processing Units</h2>
+                  <p class="mt-3">
                     Renewable energy-powered processing units that cut costs and reduce your carbon
                     footprint.
                   </p>
@@ -108,32 +100,28 @@ import { impactPotential } from '@/utils/content'
               </div>
 
               <div
-                class="flex flex-col gap-6 p-8 transition duration-300 rounded-2xl hover:bg-white hover:shadow-2xl hover:shadow-gray-600/10 dark:hover:bg-gray-700/60 dark:hover:shadow-none"
+                class="flex flex-col gap-6 p-8 text-white transition duration-300 rounded-2xl hover:bg-white hover:shadow-2xl hover:shadow-gray-600/10 hover:text-green-800"
               >
                 <div class="flex w-10 h-10 border border-gray-200 rounded dark:border-gray-700">
-                  <i class="m-auto text-gray-700 fa-solid fa-truck-ramp-box dark:text-white"></i>
+                  <i class="m-auto fa-solid fa-truck-ramp-box"></i>
                 </div>
                 <div>
-                  <h2 class="text-xl font-semibold text-gray-900 dark:text-white">
-                    Equipment Leasing
-                  </h2>
-                  <p class="mt-3 text-gray-600 dark:text-gray-400">
+                  <h2 class="text-xl font-semibold">Equipment Leasing</h2>
+                  <p class="mt-3">
                     Lease advanced agro equipment at low costs to enhance your farm’s productivity.
                   </p>
                 </div>
               </div>
 
               <div
-                class="flex flex-col gap-6 p-8 transition duration-300 rounded-2xl hover:bg-white hover:shadow-2xl hover:shadow-gray-600/10 dark:hover:bg-gray-700/60 dark:hover:shadow-none"
+                class="flex flex-col gap-6 p-8 text-white transition duration-300 rounded-2xl hover:bg-white hover:shadow-2xl hover:shadow-gray-600/10 hover:text-green-800"
               >
                 <div class="flex w-10 h-10 border border-gray-200 rounded dark:border-gray-700">
-                  <i class="m-auto text-gray-700 fa-brands fa-leanpub dark:text-white"></i>
+                  <i class="m-auto fa-brands fa-leanpub"></i>
                 </div>
                 <div>
-                  <h2 class="text-xl font-semibold text-gray-900 dark:text-white">
-                    Farmer Training
-                  </h2>
-                  <p class="mt-3 text-gray-600 dark:text-gray-400">
+                  <h2 class="text-xl font-semibold">Farmer Training</h2>
+                  <p class="mt-3">
                     Training programs to empower farmers with knowledge on sustainable farming and
                     tech use.
                   </p>
@@ -167,7 +155,7 @@ import { impactPotential } from '@/utils/content'
 
           <div class="md:w-1/2 lg:w-[47%]">
             <h2
-              class="text-3xl font-bold text-gray-900 dark:text-white md:text-4xl lg:text-5xl wow fadeInRight"
+              class="text-3xl font-bold text-gray-900 md:text-4xl lg:text-5xl wow fadeInRight"
               data-wow-duration="2s"
               data-wow-delay=".3s"
             >
@@ -194,10 +182,10 @@ import { impactPotential } from '@/utils/content'
                   <i class="m-auto text-gray-700 fa-solid fa-water dark:text-gray-300"></i>
                 </div>
                 <div class="w-5/6">
-                  <h3 class="text-lg font-semibold text-gray-700 dark:text-white">
+                  <h3 class="text-lg font-semibold text-gray-700">
                     Efficient, Affordable Watering
                   </h3>
-                  <p class="text-gray-500 dark:text-gray-400">
+                  <p class="text-gray-500">
                     Precision irrigation on a pay-per-use model, making sustainable farming
                     cost-effective.
                   </p>
@@ -216,10 +204,8 @@ import { impactPotential } from '@/utils/content'
                   ></i>
                 </div>
                 <div class="w-5/6">
-                  <h3 class="text-lg font-semibold text-gray-700 dark:text-white">
-                    Transform Your Harvest
-                  </h3>
-                  <p class="text-gray-500 dark:text-gray-400">
+                  <h3 class="text-lg font-semibold text-gray-700">Transform Your Harvest</h3>
+                  <p class="text-gray-500">
                     Quick and efficient crop processing, accessible and affordable through our solar
                     hubs.
                   </p>
@@ -230,7 +216,7 @@ import { impactPotential } from '@/utils/content'
         </div>
         <div class="my-20 md:my-32">
           <h3
-            class="text-2xl font-bold text-gray-900 dark:text-white md:w-2/3 md:text-3xl lg:text-4xl wow fadeInDown"
+            class="text-2xl font-bold text-gray-900 md:w-2/3 md:text-3xl lg:text-4xl wow fadeInDown"
             data-wow-duration="1s"
             data-wow-delay=".5s"
           >
@@ -256,19 +242,20 @@ import { impactPotential } from '@/utils/content'
                 class="lg:bg-gray-50 dark:lg:bg-darker relative overflow-hidden lg:p-16 rounded-[4rem] space-y-6 md:flex md:gap-6 justify-center md:space-y-0 lg:items-center"
               >
                 <img
-                  class="m max-w-[80%] absolute top-0 left-0 opacity-20"
+                  class="max-w-[80%] absolute top-0 opacity-10"
                   alt="image"
                   loading="lazy"
+                  :class="{ 'left-0': !(i % 2), 'right-0': !!(i % 2) }"
                   :src="potential.image"
                 />
                 <div class="flex justify-center md:5/12 lg:w-2/5" v-if="i % 2">
                   <img class="max-w-[80%]" alt="image" loading="lazy" :src="potential.image2" />
                 </div>
                 <div class="md:7/12 lg:w-3/5">
-                  <h2 class="text-3xl font-bold text-gray-900 md:text-4xl dark:text-white">
+                  <h2 class="text-3xl font-bold text-center text-gray-900 md:text-4xl md:text-left">
                     {{ potential.title }}
                   </h2>
-                  <p class="my-8 text-gray-600 dark:text-gray-300">
+                  <p class="my-8 text-center text-gray-600 dark:text-gray-300 md:text-left">
                     {{ potential.info }}
                   </p>
                 </div>

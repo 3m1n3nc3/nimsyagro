@@ -45,8 +45,12 @@
               </div>
             </div>
           </div>
-          <div class="relative px-5 py-2 mt-3 mb-14 lg:mb-24 lg:mt-0 lg:w-2/5 xl:w-3/5">
-            <div class="flex justify-center shadow-2xl rounded-3xl bg-gray-50 lg:mr-8">
+          <div
+            class="relative px-5 py-2 mt-3 md:px-10 mb-14 lg:mb-24 lg:mt-0 lg:w-2/5 xl:w-3/5 md:flex lg:block md:justify-center"
+          >
+            <div
+              class="flex justify-center shadow-2xl rounded-3xl bg-gray-50 lg:mr-8 md:w-4/5 lg:w-full"
+            >
               <img
                 class="object-contain object-left h-64 p-5 md:p-10 lg:h-96"
                 :src="slide.image_o"

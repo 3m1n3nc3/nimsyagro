@@ -67,6 +67,9 @@
           reserved</span
         >
       </div>
+      <div class="mt-2 text-center text-gray-200">
+        Developed and maintained by <a href="https://hoolicontech.com/">Hoolicontech</a>
+      </div>
     </div>
   </footer>
 </template>

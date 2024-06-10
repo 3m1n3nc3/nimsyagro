@@ -113,8 +113,8 @@
                 name="service"
                 class="block w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-primary focus:border-primary"
               >
-                <option :value="service.name" :key="service.name" v-for="service in services">
-                  {{ service.name }}
+                <option :value="service.id" :key="service.id" v-for="service in services">
+                  {{ service.id }}
                 </option>
               </select>
             </div>

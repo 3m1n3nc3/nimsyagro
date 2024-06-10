@@ -33,7 +33,7 @@
   </Teleport>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, watch, defineProps, defineEmits } from 'vue'
 const emit = defineEmits(['update:modelValue', 'opened', 'closed'])
 const props = defineProps({

@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import HeroSection from '@/components/HeroSection.vue'
+import TestimonialSection from '@/components/TestimonialSection.vue'
 import { impactPotential } from '@/utils/content'
+import { slides } from '@/utils/content'
 </script>
 
 <template>
@@ -10,6 +12,45 @@ import { impactPotential } from '@/utils/content'
         <div class="relative pt-24 ml-auto xl:pt-36">
           <HeroSection />
         </div>
+      </div>
+    </div>
+
+    <div
+      class="border-b bg-slate-50 border-black/20 lg:relative wow fadeInUp"
+      data-wow-duration="2s"
+      data-wow-delay=".2s"
+    >
+      <div class="w-full pt-16 pb-20 mx-auto text-center max-w-7xl lg:py-48 lg:text-left">
+        <div class="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
+          <h1
+            class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl wow slideInLeft"
+            data-wow-duration="2s"
+            data-wow-delay=".1s"
+          >
+            <span class="block xl:inline">POWERING AGRICULTURE</span>&nbsp;
+            <span class="block text-primary xl:inline">WITH RENEWABLE ENERGY</span>
+          </h1>
+          <p
+            class="max-w-md mx-auto mt-3 text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl wow slideInRight"
+            data-wow-duration="2s"
+            data-wow-delay=".1s"
+          >
+            At Nimsy Agro, we are powering the agricultural industry with renewable energy
+            infrastructure to bring about environmental sustainability, curtail carbon emissions,
+            improve farmers productivity, and promote long-term prosperity.
+          </p>
+        </div>
+      </div>
+      <div
+        class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full"
+      >
+        <img
+          class="absolute inset-0 object-cover w-full h-full wow zoomIn"
+          src="/src/assets/images/solar.jpg"
+          data-wow-duration="2s"
+          data-wow-delay=".2s"
+          alt="Solar Panel"
+        />
       </div>
     </div>
 
@@ -173,36 +214,31 @@ import { impactPotential } from '@/utils/content'
                 class="flex gap-4 mt-8 md:items-center wow fadeInUp"
                 data-wow-duration="2s"
                 data-wow-delay=".3s"
+                :key="slide.id"
+                v-for="slide in slides.reverse().slice(1, 4)"
               >
                 <div class="flex w-12 h-12 gap-4 border border-gray-200 rounded">
-                  <i class="m-auto text-gray-700 fa-solid fa-water"></i>
+                  <i :class="`m-auto text-gray-700 ${slide.icon}`"></i>
                 </div>
                 <div class="w-5/6">
                   <h3 class="text-lg font-semibold text-gray-700">
-                    Efficient, Affordable Watering
+                    {{ slide.title }}
                   </h3>
                   <p class="text-gray-500">
-                    Precision irrigation on a pay-per-use model, making sustainable farming
-                    cost-effective.
+                    {{ slide.info }}
                   </p>
                 </div>
               </div>
-              <div
-                class="flex gap-4 pt-4 md:items-center wow fadeInUp"
-                data-wow-duration="2s"
-                data-wow-delay=".4s"
+            </div>
+            <div class="flex justify-center m-4">
+              <RouterLink
+                :to="{ name: 'products' }"
+                class="relative flex items-center justify-center px-5 h-11 w-max before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-primary/10 before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 wow fadeInRight"
+                data-wow-duration=".8s"
+                data-wow-delay=".5s"
               >
-                <div class="flex w-12 h-12 gap-4 border border-gray-200 rounded">
-                  <i class="m-auto text-gray-700 fa-solid fa-money-bill-wheat"></i>
-                </div>
-                <div class="w-5/6">
-                  <h3 class="text-lg font-semibold text-gray-700">Transform Your Harvest</h3>
-                  <p class="text-gray-500">
-                    Quick and efficient crop processing, accessible and affordable through our solar
-                    hubs.
-                  </p>
-                </div>
-              </div>
+                <span class="relative w-max text-primary"> Learn more </span>
+              </RouterLink>
             </div>
           </div>
         </div>
@@ -259,6 +295,14 @@ import { impactPotential } from '@/utils/content'
           </div>
         </div>
       </div>
+    </div>
+    <div
+      class="pt-1 md:pt-5 wow slideInLeft"
+      data-wow-duration=".6s"
+      data-wow-delay=".3s"
+      id="solution"
+    >
+      <TestimonialSection />
     </div>
   </main>
 </template>

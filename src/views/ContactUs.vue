@@ -147,7 +147,7 @@
               <li :key="social.name" v-for="social in socials">
                 <a
                   class="text-indigo-200 hover:text-indigo-100"
-                  :href="social.href"
+                  :href="social.link"
                   target="_blank"
                 >
                   <span class="sr-only">{{ social.name }}</span>
